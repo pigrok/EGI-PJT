@@ -1,41 +1,34 @@
 import styled from 'styled-components';
 import Button from '@mui/material/Button';
-
 export const PostContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
   align-items: center;
 `;
-
 export const PostItem = styled.div`
   border: 1px solid #ddd;
   padding: 10px;
-
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: hidden;
 `;
-
 export const Image = styled.img`
   object-fit: contain;
   width: 100%;
   /* height: 80%; */
   aspect-ratio: 1;
 `;
-
 export const Container = styled.div`
   margin: 0 auto;
   overflow: hidden;
   margin-top: 50px;
 `;
-
 export const MainContainer = styled.div`
   display: flex;
 `;
-
 export const CarouselContainer = styled.div`
   width: 50%;
   height: 100%;
@@ -47,7 +40,6 @@ export const CarouselContainer = styled.div`
   justify-content: center;
   overflow: hidden;
 `;
-
 export const ContentsContainer = styled.div`
   width: 50%;
   height: 100%;
@@ -58,40 +50,33 @@ export const ContentsContainer = styled.div`
   overflow-y: scroll;
   border-left: 1px solid #ddd;
 `;
-
 export const EditDeleteButtons = styled.div`
   margin-top: 10px;
   button {
     margin-right: 10px;
   }
 `;
-
 export const PostTitle = styled.h1`
   font-size: 24px;
   margin-bottom: 10px;
 `;
-
 export const Price = styled.h1`
   font-size: 20px;
   color: green;
   margin-bottom: 10px;
 `;
-
 export const PostInfo = styled.p`
   font-size: 14px;
   color: gray;
   margin-bottom: 10px;
 `;
-
 export const PostBody = styled.div`
   font-size: 16px;
   margin-bottom: 20px;
-
   p {
     margin: 10px 0;
   }
 `;
-
 export const StyledButton = styled(Button)`
   && {
     background-color: gray;
@@ -100,18 +85,15 @@ export const StyledButton = styled(Button)`
     padding: 10px 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-
     &:hover {
       background-color: #0056b3;
     }
   }
 `;
-
 export const RoundedCheckboxWrapper = styled.div`
   display: inline-flex;
   align-items: center;
 `;
-
 export const CustomCheckbox = styled.input`
   appearance: none;
   -webkit-appearance: none;
@@ -123,17 +105,14 @@ export const CustomCheckbox = styled.input`
   margin-right: 8px;
   outline: none;
   cursor: pointer;
-
   /* &:checked {
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #007BFF;
+    border-color: #007BFF;
   } */
 `;
-
 export const CheckboxLabel = styled.label`
   cursor: pointer;
 `;
-
 export const ModalWrapper = styled.div`
   position: fixed;
   top: 0;
@@ -146,14 +125,12 @@ export const ModalWrapper = styled.div`
   align-items: center;
   z-index: 99;
 `;
-
 export const ModalContent = styled.div`
   background-color: skyblue;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 `;
-
 export const ModalCloseBtn = styled.button`
   margin-bottom: 20px;
   margin-left: 625px;
@@ -163,13 +140,11 @@ export const ModalCloseBtn = styled.button`
   background-color: transparent;
   border: none;
 `;
-
 export const EndMessage = styled.div`
   text-align: center;
   padding: 10px;
   color: gray;
 `;
-
 export const CategoryButton = styled.button`
   margin: 2px;
   padding: 8px 16px;
@@ -179,7 +154,6 @@ export const CategoryButton = styled.button`
   height: 100px;
   cursor: pointer;
 `;
-
 export const CategoryButtonContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -196,18 +170,15 @@ export const ButtonGrid = styled.div`
   margin-top: 80px;
   margin-bottom: 80px;
 `;
-
 export const ImageContainer = styled.div`
   height: 350px;
 `;
-
 export const CardCategory = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-weight: bold;
 `;
-
 export const CardTitle = styled.div`
   /* white-space: nowrap; */
   overflow: hidden;

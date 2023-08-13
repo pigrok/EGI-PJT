@@ -7,6 +7,7 @@ import * as S from './Styled.SignUp';
 import { supabase } from '../../../services/supabase/supabase';
 
 import type { UserType } from '../../../types/supabase';
+import { PictureOutlined } from '@ant-design/icons';
 
 type SignUpType = {
   setLoginModal: (isOpen: boolean) => void;
@@ -121,7 +122,7 @@ const SignUp = ({ setLoginModal, setSignUpmodal }: SignUpType) => {
     }
     try {
       const isEmailDuplicated = await checkEmailDuplication(userData.email);
-
+      console.log('userData.email', userData.email);
       if (isEmailDuplicated) {
         setIsEmailCheked(true);
         alert('중복된 이메일입니다.');
@@ -202,7 +203,11 @@ const SignUp = ({ setLoginModal, setSignUpmodal }: SignUpType) => {
           <S.InputWrapper>
             <S.ProfileImgnameBox>
               <S.ProfileImgLabel> 프로필 사진 </S.ProfileImgLabel>
+              <S.Label htmlFor="file-input">
+                <PictureOutlined />
+              </S.Label>
               <S.ProfileImgInput
+                id="file-input"
                 type="file"
                 value={userData.profileimg?.name}
                 accept="image/*"

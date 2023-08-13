@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
-import bannerimage1 from '../bannerimage/banner_main.jpg';
+// import bannerimage1 from '../bannerimage/banner_main.jpg';
 import bannerimage2 from '../bannerimage/bannermain2.jpg';
 import bannerimage3 from '../bannerimage/banneriphone.jpg';
 import bannerimage4 from '../bannerimage/banner_samsung.png';
@@ -9,10 +9,10 @@ import bannerimage5 from '../bannerimage/banner_other.png';
 import bannerimage6 from '../bannerimage/lck.png';
 
 const imageData = [
-  {
-    alt: 'image1',
-    src: bannerimage1
-  },
+  // {
+  //   alt: 'image1',
+  //   src: bannerimage1
+  // },
   {
     alt: 'image2',
     src: bannerimage2

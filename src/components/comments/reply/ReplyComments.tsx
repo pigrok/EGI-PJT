@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from 'react';
-import * as S from '../comment/Styled.Comments';
-import CommentPanel from '../comment/CommentPanel';
+import * as S from './Styled.Reply';
+import CommentPanel from '../comment/commentbody/CommentPanel';
 import { useQuery } from '@tanstack/react-query';
 import { fetchReplyComments } from '../../../services/supabase/replyComments';
 import useCommentMutation from '../../../hooks/useCommentMutation';
-import { jotaiUserDataAtom } from '../../common/Header';
+import { jotaiUserDataAtom } from '../../common/header/Header';
 import { useAtom } from 'jotai';
 // import baseProfile from '../../image/baseprofile.jpeg';
 import * as SL from '../../common/Styled.Loading';
@@ -102,23 +102,35 @@ const ReplyComments = ({ cid, pid }: ReplyCommentsProps) => {
 
   return (
     <>
-      {filteredComments?.map((comment) => (
-        <S.CommentItem key={comment.rid} margin={'20px 20px 10px 40px'} width={'1300px'}>
-          <S.CommentProfileImgBox>
-            <S.CommentProfileImg
-              src={`${process.env.REACT_APP_SUPABASE_STORAGE_URL}${comment?.profileimg}`}
-              alt="Profile"
-            />
-            <S.CommentAuthor>{comment.nickname}</S.CommentAuthor>
-          </S.CommentProfileImgBox>
-          <S.CommentTextBox>
-            {isUpdating && updateReplyId == comment.rid ? (
-              <S.CommentInput value={updateReply} onChange={handleUpdateReplyInputChange} onKeyDown={handleKeyDown} />
-            ) : (
-              <S.CommentBody>{comment.body}</S.CommentBody>
-            )}
-          </S.CommentTextBox>
-          <S.CommentPanel>
+      {' '}
+      <S.Container>
+        {filteredComments?.map((comment) => (
+          <S.Wrapper key={comment.rid}>
+            <S.ProfileContainer>
+              ↪
+              <S.ProfileBox>
+                <S.ProfileImg
+                  src={`${process.env.REACT_APP_SUPABASE_STORAGE_URL}${comment?.profileimg}`}
+                  alt="Profile"
+                />
+              </S.ProfileBox>
+              {isUpdating && updateReplyId == comment.rid ? (
+                <S.TextBox>
+                  {' '}
+                  <div>{comment.nickname}</div>
+                  <S.ReplyEditText
+                    value={updateReply}
+                    onChange={handleUpdateReplyInputChange}
+                    onKeyDown={handleKeyDown}
+                  />
+                </S.TextBox>
+              ) : (
+                <S.TextBox>
+                  <div>{comment.nickname}</div>
+                  <S.Body>{comment.body}</S.Body>
+                </S.TextBox>
+              )}
+            </S.ProfileContainer>
             {jotaiUserData?.uid === comment.uid ? ( // 해당 댓글의 작성자일 경우에만 수정 및 삭제 버튼을 표시
               isUpdating && updateReplyId == comment.rid ? (
                 <CommentPanel
@@ -134,11 +146,12 @@ const ReplyComments = ({ cid, pid }: ReplyCommentsProps) => {
                 />
               )
             ) : (
-              <div style={{ width: '105px' }} />
+              <div />
             )}
-          </S.CommentPanel>
-        </S.CommentItem>
-      ))}
+          </S.Wrapper>
+        ))}
+      </S.Container>
+      <S.Line></S.Line>
     </>
   );
 };
