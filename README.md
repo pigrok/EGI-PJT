@@ -21,8 +21,8 @@
 
 ### Development
 
-<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> <img src="https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white"/>
-![Redux](https://img.shields.io/badge/Redux-764ABC?style=for-the-badge&logo=Redux&logoColor=purple)
+<img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=React&logoColor=white"/> 
+<img src="https://img.shields.io/badge/TypeScript-6cb9f5?style=for-the-badge&logo=#3178C6&logoColor=white">
 
 #
 
