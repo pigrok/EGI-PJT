@@ -1,8 +1,8 @@
-## :bicyclist: 프로젝트 소개
-
 # :star: ELECTRO GET IT (전자기릿)
 
 <br/>
+
+## :bicyclist: 프로젝트 소개
 
 
 ### :boxing_glove: 개발기간
