@@ -19,7 +19,8 @@ const PasswordReset = () => {
   const resetPasswordHandler = async () => {
     try {
       const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: 'http://localhost:3000/resetPassword'
+      redirectTo: 'https://egi-alpha.vercel.app/resetPassword'
+
       });
 
       if (!error) {
