@@ -60,6 +60,7 @@ const SignUp = ({ setLoginModal, setSignUpmodal }: SignUpType) => {
     fetchUsers();
     try {
       if (!selectedProfileImg) {
+          alert('사진을 선택 해주세요!');
         return;
       }
       if (userData.password !== confirmedPassword) {
