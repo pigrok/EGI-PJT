@@ -70,7 +70,7 @@
 
 <br/>
 
-### :adhesive_bandage: 도전 해볼만 과제
+### :adhesive_bandage: 도전 해볼만한 과제
 
 * [ ] 채팅 기능
 
